@@ -96,7 +96,10 @@
             </div>
             <div class="p-2 flex flex-col max-h-[98.9vh] md:overflow">
                 <div class="flex-1 mt-6 mx-7 relative">
-                    <slot />
+                    <Transition name="transition" mode="out-in">
+                        <slot />
+                    </Transition>
+                    <!-- <slot /> -->
                 </div>
                 <!-- <div class="p-3 text-center">   
                     <span>Copyright @!2024</span>

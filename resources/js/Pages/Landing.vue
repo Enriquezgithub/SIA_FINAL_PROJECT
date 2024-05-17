@@ -30,8 +30,8 @@
 </script>
 
 <template>
-    <Head title="Dashboard"/>
     <main>
+        <Head title="Dashboard"/>
         <div class="md:grid grid-cols-1 md:grid-cols-3 md:gap-4" >  
             <div class="my-5 bg-green-400 border-green-600 shadow rounded border-l-4 w-full h-[20vh]">
                 <div class="p-2 flex flex-col h-full">

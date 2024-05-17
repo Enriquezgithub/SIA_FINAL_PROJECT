@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes zoom-in {
+    0% {
+        opacity: .2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes zoom-out {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: .2;
+    }
+}
+
+.transition-enter-active{
+    animation: ease 1s zoom-in;
+}
+
+.transition-leave-active{
+    animation: ease 1ms zoom-out;
+}
