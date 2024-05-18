@@ -82,7 +82,7 @@ class ProductController extends Controller
                 $prod->id,
                 $prod->name,
                 $prod->description,
-                $prod->category->name ?? 'N/A', // Handle case where category might be null
+                $prod->category->name ?? 'N/A',
                 $prod->price,
                 $prod->status,
                 $prod->quantity,
@@ -144,29 +144,4 @@ class ProductController extends Controller
         $product->delete();
         return redirect('/products')->with('delete', 'Product deleted successfully');
     }
-
-    // public function import(Request $request)
-    // {
-    //     $request->validate([
-    //         'file' => 'required',
-    //     ]);
-
-    //     $file = $request->file('file');
-    //     $fileData = file_get_contents($file);
-    //     $rows = array_map('str_getcsv', explode("\n", $fileData));
-
-    //     foreach ($rows as $row) {
-    //         Product::create([
-    //             'name' => $row[0],
-    //             'description' => $row[1],
-    //             'category_id' => $row[2],
-    //             'price' => $row[3],
-    //             'status' => $row[4],
-    //             'quantity' => $row[5],
-    //             'image' => $row[6]
-    //         ]);
-    //     }
-
-    //     return redirect('/customers')->with('create', 'Customers imported successfully!');
-    // }
 }
